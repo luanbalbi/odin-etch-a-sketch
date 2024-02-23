@@ -27,5 +27,6 @@ function createGrids(num = 16) {
 
 button.addEventListener("click", () => {
     const gridNumber = document.querySelector("#gridNumber");
+    if (gridNumber.value > 100) gridNumber.value = 100;
     createGrids(gridNumber.value)
 });
