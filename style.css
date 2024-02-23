@@ -1,0 +1,23 @@
+* {
+    border: 0px solid black;
+}
+
+
+.container {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 720px;
+    height: 720px;
+}
+
+.grid {
+    background-color: azure;
+    width: 45px;
+    height: 45px;
+}
+
+.hover {
+    background-color: black;
+}
