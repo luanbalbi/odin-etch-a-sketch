@@ -2,6 +2,10 @@
 const container = document.querySelector(".container");
 const button = document.querySelector("#generateBtn");
 
+function randomColor() {
+    return Math.floor(Math.random()*16777215).toString(16);
+}
+
 function createGrids(num = 16) {
     const size = 720/num;
     container.textContent = '';
@@ -15,8 +19,8 @@ function createGrids(num = 16) {
     const grids = document.querySelectorAll(".grid");
     
     grids.forEach(grid => {
-        grid.addEventListener('mouseover', () => {grid.classList.toggle('hover')});
-        grid.addEventListener('mouseout', () => {grid.classList.toggle('hover')});
+        grid.addEventListener('mouseover', () => {grid.style.backgroundColor = `#${randomColor()}`});
+        grid.addEventListener('mouseout', () => {grid.style.backgroundColor = ""});
     });
     
 }
